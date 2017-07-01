@@ -163,5 +163,9 @@ namespace LemonMG
             return true;
         }
 
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            keybd_event(Keys.ControlKey, 0, 2, 0);
+        }
     }
 }
