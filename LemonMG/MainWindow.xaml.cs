@@ -60,6 +60,8 @@ namespace LemonMG
                     t = TimeSpan.FromMinutes(i);
                 else if (lx.Text == "小时")
                     t = TimeSpan.FromHours(i);
+                if (t <= TimeSpan.FromMilliseconds(100))
+                { t = TimeSpan.FromMilliseconds(100); pl.Text = "100";tit.Text = "最低只能使用100毫秒"; }
                 Action a=new Action( async delegate
                 {
                     while (true)
